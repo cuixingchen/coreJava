@@ -1,0 +1,7 @@
+作业：
+  1 今天的代码和异常概念、map的用法。
+  2 编程：
+    a 自定义MyArrayList，要求用Object[]做底层，提供add、remove、get、size四个方法，方法的逻辑参考ArrayList。
+    b 自定义MyHashMap，底层用HashSet，存所有的键值对。自定义一个键值对的类。提供put、remove、entrySet（键值对组成的Set）、size方法，方法的逻辑 参考 HashMap。
+    如果有时间，可以考虑加入泛型。
+    

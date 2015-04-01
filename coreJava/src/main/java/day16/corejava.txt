@@ -1,0 +1,28 @@
+1 基本语法
+  java代码结构
+  package xxx；
+  import xx.xx;
+  public class xx{
+    属性
+    构造
+    方法
+    主方法
+  }
+  标识符、运算符、数组的初始化和使用
+
+2 面向对象
+  类、对象、属性、方法、构造、重写、重载、封装、继承、多态、super、this、static、final、abstract、抽象和接口
+
+3 类库
+  java.lang     Object/Class/Thread/String/StringBuffer/StringBuilder/
+Integer/Double
+重点：Object/Class/String/Integer/Double
+  java.util
+  集合(List/Map/Set)/Date/Calendar/Comparator/Random/Arrays/Collections
+重点：集合、Date、Calendar
+  java.io
+  File/5对流
+重点：会组合流
+  java.net
+URL/URLConnection/InetAddress/Socket/ServerSocket/DatagramSocket/DatagramPacket
+无重点

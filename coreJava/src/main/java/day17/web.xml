@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<web-app url="http://www.tarena.com.cn/">
+  <servlet>
+     <url>bbs</url>
+	 <class>day17.BbsServlet</class>
+  </servlet>
+  <servlet>
+     <url>sales</url>
+	 <class>day17.SalesServlet</class>
+  </servlet>
+</web-app>

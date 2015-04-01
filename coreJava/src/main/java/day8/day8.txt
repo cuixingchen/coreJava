@@ -1,0 +1,55 @@
+静态内部类：
+  直接定义在类体{}中，并且有static修饰的
+成员内部类：
+  直接定义在类体{}中，并且没有static修饰的
+局部内部类：
+  定义在其他位置的内部类
+匿名内部类：(重点)
+  是一种特殊的局部内部类，没有类名。
+
+匿名内部类：
+无类名、无class关键字、有继承关系但无继承关键字、无构造
+有父类/父接口名、有类体
+匿名内部类只在写类的时候使用一次，主要用于接口的便捷实现。
+
+java中，参数传递 是值传递。基本类型的参数，传递基本类型的值，引用类型的参数，传递引用类型的值。所有值，在栈中会建立原有变量的副本。
+
+  public void test(int i){//i是a的副本，但不是a
+      System.out.println(i);//test方法中只有i，没有a
+  }
+  public static void main(String[] args){
+    int a = 10;
+    test(a);//main中只有a，没有i
+  }
+
+Object中定义了clone方法，克隆分为浅克隆和深克隆，浅克隆只复制一层，对象的属性共享，深克隆层层复制，对象的属性重新申请内存空间。Object是浅克隆。
+
+Object中没有定义克隆规范，规范在Cloneable接口中，所以只有Cloneable接口的类才能调用clone()，否则不支持克隆异常.
+
+克隆对象时，需要实现Cloneable接口，并且重写clone()，权限改为public
+
+Student s1 = new Student(1,"zhang");
+Student s2 = new Student(1,"zhang");
+在现实世界，s1 s2是同一个学生
+在计算机中，s1 == s2？false 不是同一个学生
+可以用equals方法进行比较，重写后按 id 比较。
+
+对象的比较如果不是比内存地址，提供了equals方法实现。
+在Object中定义equals方法，用==实现，提供 重写equals，从而改变比较的 规则。
+
+==和equals的使用：
+ 1 基本类型的比较用 == ，基本类型没有equals
+ 2 引用类型和null比较，用 == 
+ 3 非空引用类型之间的比较，用equals。
+
+在java中，equals方法和hashCode()有连带关系。因为java对hashCode有规定：
+ equals为true的两个对象，hashCode必须相同，反之未必。
+ equals为false的两个对象，hashCode无所谓。
+因此，重写equals必须重写hashCode，保持一致。
+
+toString()返回对象的字符串描述，相当于对象名片。调用三种方式：
+1 用println或者print 打印对象时，自动调用toString()
+2 用+做字符串链接时，自动调用toString()链接。
+3 正常调用，对象.toString()
+
+

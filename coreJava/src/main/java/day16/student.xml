@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<students>
+  <student>
+    <id>1</id>
+    <name>zhangfei</name>
+    <sex>man</sex>
+    <lesson> 
+      <lName>chinese</lName>
+      <lScore>80</lScore>
+    </lesson>
+    <lesson> 
+      <lName>math</lName>
+      <lScore>90</lScore>
+    </lesson>
+  </student>
+  <student>
+    <id>2</id>
+    <name>zhaoyun</name>
+    <sex>man</sex>
+    <lesson> 
+      <lName>chinese</lName>
+      <lScore>90</lScore>
+    </lesson>
+    <lesson> 
+      <lName>math</lName>
+      <lScore>80</lScore>
+    </lesson>
+  </student>
+</students>

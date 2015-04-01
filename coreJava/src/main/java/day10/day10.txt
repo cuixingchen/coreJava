@@ -1,0 +1,24 @@
+List
+ ArrayList、LinkedList、Vector
+ArrayList底层是Object[]实现，LinkedList底层双向链表
+ArrayList和Vector的区别：
+ ArrayList非线程安全，效率高
+ Vector线程安全，效率低，推荐使用 ArrayList
+
+Set中增加元素：
+ add  addAll  
+ 删除： remove  clear
+ 取出：调iterator()得到Iterator，用Iterator中的hasNext()做条件，循环next()取出元素。hasNext()只判断是否有下个元素，不移动指针，next()移动指针。
+ HashSet LinkedHashSet
+
+往HashSet中加元素时，先调元素的hashCode()定位，如果没有对象放入，如果有对象调equals()判断是否重复，如果true丢弃，false 放入。
+
+在java中，引用类型的排序用java.lang.Comparable(自然排序)或者java.util.Comparator(比较器排序)。排序与equals无关。
+
+TreeSet底层是平衡二叉树，调Comparable的compareTo方法比较大小，小的放左，大的放右边，相等的丢弃。
+
+
+
+
+
+

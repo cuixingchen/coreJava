@@ -1,0 +1,70 @@
+List-->有序列表
+Set-->无序集合
+SortedSet-->可排序集合
+String
+Map-->有内部静态接口，定义了键值对。
+方法：
+  增加：put(key,value)
+  删除：clear()  remove(key)
+  取出：
+    不知道key：keySet()-->Set<Key>-->get(key)
+    知道key：get(key)
+  元素(键值对)个数：size()
+
+实现类：HashMap  Hashtable  LinkedHashMap
+可排序Map：SortedMap-->TreeMap 以key排序
+HashMap和Hashtable区别：
+HashMap 非线程安全，效率较高，支持null
+Hashtable 线程安全，效率较低，不支持null(空指针异常)
+
+2个位置 5种写法 6不能
+泛型可以定义在类名/接口名后面，方法返回值前面。
+
+<E> 常见写法
+<E extends XX> XX 或者子类
+<?> 通配
+<? extends XX> XX 或者子类
+<? super XX> XX 或者父类
+
+不能new       new G()错误
+不能new 数组    new G[]错误
+不能是基本类型  <int>错误
+不能是static泛型   static G g;错误
+不能是异常子类    class A<G> extends Exception 错误
+不能出现在catch()中  try{}catch(E e)
+
+在程序的运行过程中，会出现某些特殊情况。其中可以处理的叫做异常(java.lang.Exception)，不能处理的严重问题叫错误(java.lang.Error)。
+
+java异常机制：
+ 1 当执行到产生异常的代码时，由JVM或程序员抛出异常对象
+ 2 寻找异常处理的代码(try/catch)，如果有，处理完毕。
+ 3 如果没有找到，继续上抛(抛到上一层)，继续寻找。
+ 4 如果到main()方法中还没有处理，异常会中断代码的执行
+ 5 每抛出一层，异常会中断当前层的代码。
+
+非检测异常用判断处理，检测异常用try/catch处理。
+try{ //出现1次
+//可能发生异常的语句
+}catch(XXException ee){ //出现0-n次
+//发生了异常后的处理语句
+}finally{ //出现0-1次,如果catch不出现，finally必须出现
+//无论是否发生异常都必须执行的语句
+}
+如果需要对异常进行差异化处理，需要写多个catch语句，异常范围从小到大。finally里面放必须执行的语句。
+
+对于无法处理的检测异常，可以用throws通过编译的检测，但没有处理掉异常，异常的处理由方法、构造的调用者完成。
+throws 可以操作检测和非检测异常，但在应用中，只操作检测异常。 
+
+方法结束的三种情况：
+ 1 执行完最后一句
+ 2 遇到return语句
+ 3 抛出一个未捕获异常(没有try/catch)
+
+做项目时，有时需要自定义 业务异常。自定义异常的步骤：
+ 1 继承Exception或者其子类。
+ 2 提供两个构造，无参和String做参数的。
+
+练习：写一个Person，setAge方法中，如果年龄不合适，抛出异常。要求自定义一个业务异常AgeException。
+
+
+

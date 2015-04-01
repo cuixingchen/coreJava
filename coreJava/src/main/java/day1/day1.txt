@@ -1,0 +1,65 @@
+Java基础术语：
+ JDK ：java 开发工具包，由sun公司提供官方的下载，安装后即可得到java开发环境。下载时注意版本和操作系统。
+ JRE ：java运行环境，安装JDK后得到JRE，JRE包括JVM+类库。注意JRE需要配置环境变量。
+ JVM : java虚拟机，是java程序运行的载体，提供了很多的功能。
+ GC ：内存垃圾回收，由JVM自动完成。程序员有建议权，没有决定权。
+ API ：应用程序接口，在Java中，特指官方提供的类库的说明文档。
+ IDE ：集成开发环境，把开发集于一身的开发工具，是大型的商业开发使用的开发工具。主要包括Eclipse、JBuilder等
+
+java开发步骤：
+  1 下载并安装JDK
+  2 配置环境变量(只做一次即可)
+  3 写一个源文件XX.java
+  4 用javac XX.java编译，生成XX.class字节码文件
+  5 用java XX运行程序
+
+右键点击我的电脑-->属性-->高级-->环境变量
+注意：!!配置Path时，不要删除原有任何内容，只能添加。
+  WINDOWS中，;代表分隔，Unix中，:代表分隔。
+环境变量三个：
+  Path/PATH，系统路径，存在Path的可执行文件可以在任意目录下执行。配置任何目录都可以执行的可执行文件，即bin。
+C:\Program Files\Java\jdk1.6.0\bin
+  CLASSPATH，类库路径，JVM只能识别在CLASSPATH中配置的类，配置lib目录。5.0以后的版本CLASSPATH只需要配置当前目录。Sun官方的类库可以找到。
+.;C:\Program Files\Java\jdk1.6.0\lib
+  JAVA_HOME，java安装目录，为以后某些服务器提供帮助，现在可以不配。
+C:\Program Files\Java\jdk1.6.0\
+
+javac 回车后，如有帮助提示，证明配置正确。
+java -version 也可以验证。
+
+配置完环境变量后，windows系统需要重启DOS窗口，unix需要用source xx(xx就是修改的配置文件)
+
+jar是.class文件的压缩包，压缩方式与zip完全一致。
+java注释分三种：
+单行注释：//开始到本行结束都是注释
+多行注释：/*开始   */结束，中间都是注释
+多行注释：/**开始   */结束，中间都是注释
+javadoc命令能提取出/** */注释，形成文档
+
+java用package指定class文件的目录。在java文件的第一行写上package xx.xx; xx.xx叫包名，实际上是将来目录名。.用来分隔多层目录。
+有package语句的类，用
+javac -d . HelloWorld.java编译
+执行时，用
+java 包名.类名   执行。
+
+当使用非本包(不是相同目录)并且不是java.lang包中的类时，需要import语句进行导入。import不能取代环境变量的设置。
+
+练习：
+  要求写一个Add类，输入两个int，打印出他们的和。
+
+java标识符给类、方法、变量、包。。。起名字。
+准则：
+1 只能是字母、数字、_、$组成，数字不能是第一个。
+2 长度无限制。
+3 区分大小写，JAVA区分大小写。
+4 可以是汉字，但不推荐使用汉字，因为编码问题。
+5 不能是java关键字
+
+java编程规范，不是语法，是业界默认的编程规则。
+类名、接口名所有单词首字母全大写，其它字母小写。UserName
+方法名、变量名首字母小写，其它单词首字母大写。userName
+包名全小写，不同单词之间.隔开。 user.name
+常量名所有字母全大写，不同单词之间_隔开。 USER_NAME
+
+
+

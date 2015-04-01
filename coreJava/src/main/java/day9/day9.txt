@@ -1,0 +1,20 @@
+String底层是由char[]实现，是不变的。有字符串常量和new的区别。
+构造：
+new String(byte[] bytes)  IO时用构造把byte[]组成String
+new String(String s) 创建了s的副本
+方法：
+char charAt(int index) 返回某个位置的char，下标从0开始
+boolean endsWith(String suffix) 判断字符串是否以指定的后缀结束
+boolean startsWith(String prefix) 判断字符串是否以指定的前缀开始
+boolean equalsIgnoreCase(String anotherString) 不考虑大小写比较
+byte[] getBytes() IO时用 把String拆成byte[]
+int indexOf(String str,int beginIndex) 
+   返回指定子字符串在此字符串中第一次出现处的位置下标，找不到返回-1
+int length() 返回此字符串的长度 
+boolean matches(String regex) 是否匹配给定的正则表达式 
+String replace(CharSequence target, CharSequence replacement) 用于字符串的替换
+String[] split(String regex) 拆分此字符串 
+String substring(int beginIndex)(int begin,int endIndex) 
+  返回一个新的字符串，它是此字符串的一个子字符串 
+String toUpperCase() 全部字母转大写
+String trim() 去掉首尾空白
